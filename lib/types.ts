@@ -114,3 +114,13 @@ export interface Recruitment {
   hiredCandidate: string | null
 }
 
+export interface User {
+  id: string
+  username: string
+  password: string
+  email: string
+  firstName: string
+  lastName: string
+  role: "admin" | "manager" | "user"
+}
+

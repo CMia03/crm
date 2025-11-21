@@ -13,8 +13,13 @@ import {
   GraduationCap,
   UserPlus,
   Menu,
+  LogOut,
+  UserCircle,
 } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { getSession, logout as logoutUser } from "@/lib/auth"
+import { useRouter } from "next/navigation"
+import type { AuthSession } from "@/lib/auth"
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
@@ -29,7 +34,19 @@ const navigation = [
 
 export function Sidebar() {
   const pathname = usePathname()
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
+  const [session, setSession] = useState<AuthSession | null>(null)
+
+  useEffect(() => {
+    setSession(getSession())
+  }, [])
+
+  const logout = () => {
+    logoutUser()
+    setSession(null)
+    router.push("/login")
+  }
 
   return (
     <>
@@ -52,7 +69,7 @@ export function Sidebar() {
               <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-green-500 shadow-md">
                 <LayoutDashboard className="h-5 w-5 text-white" />
               </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
                 HR Manager
               </h1>
             </div>
@@ -91,6 +108,29 @@ export function Sidebar() {
               )
             })}
           </nav>
+
+          <div className="mt-auto pt-6 border-t-2 border-blue-100 dark:border-slate-700">
+            {session && (
+              <div className="mb-4 px-4 py-2 rounded-lg bg-blue-50/50 dark:bg-slate-700/50">
+                <div className="flex items-center gap-2 mb-2">
+                  <UserCircle className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                  <p className="text-xs font-semibold text-foreground">
+                    {session.user.firstName} {session.user.lastName}
+                  </p>
+                </div>
+                <p className="text-xs text-muted-foreground ml-6">
+                  {session.user.role}
+                </p>
+              </div>
+            )}
+            <button
+              onClick={logout}
+              className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/30 hover:shadow-md"
+            >
+              <LogOut className="h-5 w-5" />
+              <span>Déconnexion</span>
+            </button>
+          </div>
         </div>
       </aside>
 
