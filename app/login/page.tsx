@@ -115,25 +115,7 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          <div className="mt-6 pt-6 border-t border-blue-100 dark:border-slate-700">
-            <p className="text-xs text-muted-foreground text-center mb-3">
-              Comptes de démonstration :
-            </p>
-            <div className="space-y-2 text-xs">
-              <div className="flex justify-between items-center p-2 rounded bg-blue-50/50 dark:bg-slate-700/50">
-                <span className="font-medium text-foreground">Admin</span>
-                <span className="text-muted-foreground">admin / admin123</span>
-              </div>
-              <div className="flex justify-between items-center p-2 rounded bg-green-50/50 dark:bg-slate-700/50">
-                <span className="font-medium text-foreground">Manager</span>
-                <span className="text-muted-foreground">manager / manager123</span>
-              </div>
-              <div className="flex justify-between items-center p-2 rounded bg-yellow-50/50 dark:bg-slate-700/50">
-                <span className="font-medium text-foreground">User</span>
-                <span className="text-muted-foreground">user / user123</span>
-              </div>
-            </div>
-          </div>
+        
         </CardContent>
       </Card>
     </div>
