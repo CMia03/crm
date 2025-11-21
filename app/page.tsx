@@ -53,9 +53,9 @@ export default function Dashboard() {
       description: "Total des employés",
       icon: Users,
       gradient: "from-blue-500 to-blue-600",
-      bgColor: "bg-blue-50",
-      iconColor: "text-blue-600",
-      borderColor: "border-blue-200",
+      bgColor: "bg-blue-50 dark:bg-blue-900/20",
+      iconColor: "text-blue-600 dark:text-blue-400",
+      borderColor: "border-blue-200 dark:border-blue-800",
     },
     {
       title: "Départements",
@@ -63,9 +63,9 @@ export default function Dashboard() {
       description: "Départements actifs",
       icon: Building2,
       gradient: "from-green-500 to-green-600",
-      bgColor: "bg-green-50",
-      iconColor: "text-green-600",
-      borderColor: "border-green-200",
+      bgColor: "bg-green-50 dark:bg-green-900/20",
+      iconColor: "text-green-600 dark:text-green-400",
+      borderColor: "border-green-200 dark:border-green-800",
     },
     {
       title: "Congés en attente",
@@ -73,9 +73,9 @@ export default function Dashboard() {
       description: "Demandes à traiter",
       icon: Calendar,
       gradient: "from-yellow-500 to-yellow-600",
-      bgColor: "bg-yellow-50",
-      iconColor: "text-yellow-600",
-      borderColor: "border-yellow-200",
+      bgColor: "bg-yellow-50 dark:bg-yellow-900/20",
+      iconColor: "text-yellow-600 dark:text-yellow-400",
+      borderColor: "border-yellow-200 dark:border-yellow-800",
     },
     {
       title: "Évaluations",
@@ -84,7 +84,7 @@ export default function Dashboard() {
       icon: FileText,
       gradient: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
-      iconColor: "text-blue-600",
+      iconColor: "text-blue-600 dark:text-blue-400",
       borderColor: "border-blue-200",
     },
     {
@@ -93,9 +93,9 @@ export default function Dashboard() {
       description: "Formations programmées",
       icon: GraduationCap,
       gradient: "from-green-500 to-green-600",
-      bgColor: "bg-green-50",
-      iconColor: "text-green-600",
-      borderColor: "border-green-200",
+      bgColor: "bg-green-50 dark:bg-green-900/20",
+      iconColor: "text-green-600 dark:text-green-400",
+      borderColor: "border-green-200 dark:border-green-800",
     },
     {
       title: "Recrutements ouverts",
@@ -103,16 +103,16 @@ export default function Dashboard() {
       description: "Postes à pourvoir",
       icon: UserPlus,
       gradient: "from-yellow-500 to-yellow-600",
-      bgColor: "bg-yellow-50",
-      iconColor: "text-yellow-600",
-      borderColor: "border-yellow-200",
+      bgColor: "bg-yellow-50 dark:bg-yellow-900/20",
+      iconColor: "text-yellow-600 dark:text-yellow-400",
+      borderColor: "border-yellow-200 dark:border-yellow-800",
     },
   ]
 
   return (
     <div className="space-y-8">
       <div className="space-y-2">
-        <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 dark:from-blue-400 dark:via-green-400 dark:to-yellow-400 bg-clip-text text-transparent">
           Dashboard
         </h1>
         <p className="text-muted-foreground text-lg">
@@ -131,7 +131,7 @@ export default function Dashboard() {
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${stat.gradient} opacity-10 rounded-full -mr-16 -mt-16`} />
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 relative z-10">
                 <CardTitle className="text-sm font-semibold text-foreground">{stat.title}</CardTitle>
-                <div className={`p-2 rounded-lg bg-white/80 shadow-sm`}>
+                <div className={`p-2 rounded-lg bg-white/80 dark:bg-slate-700/80 shadow-sm`}>
                   <Icon className={`h-5 w-5 ${stat.iconColor}`} />
                 </div>
               </CardHeader>
@@ -147,11 +147,11 @@ export default function Dashboard() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white shadow-lg hover:shadow-xl transition-shadow">
+        <Card className="border-2 border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 to-white dark:from-slate-800 dark:to-slate-800 shadow-lg hover:shadow-xl transition-shadow">
           <CardHeader className="pb-4">
             <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-blue-100">
-                <TrendingUp className="h-5 w-5 text-blue-600" />
+              <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30">
+                <TrendingUp className="h-5 w-5 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
                 <CardTitle className="text-xl">Activités récentes</CardTitle>
@@ -161,9 +161,9 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="flex items-center gap-4 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-blue-100">
-                <div className="p-2 rounded-full bg-green-100">
-                  <TrendingUp className="h-4 w-4 text-green-600" />
+              <div className="flex items-center gap-4 p-3 rounded-lg bg-white/60 dark:bg-slate-700/60 backdrop-blur-sm border border-blue-100 dark:border-slate-700">
+                <div className="p-2 rounded-full bg-green-100 dark:bg-green-900/30">
+                  <TrendingUp className="h-4 w-4 text-green-600 dark:text-green-400" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-foreground">Système opérationnel</p>
@@ -176,11 +176,11 @@ export default function Dashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-green-200 bg-gradient-to-br from-green-50 to-white shadow-lg hover:shadow-xl transition-shadow">
+        <Card className="border-2 border-green-200 dark:border-green-800 bg-gradient-to-br from-green-50 to-white dark:from-slate-800 dark:to-slate-800 shadow-lg hover:shadow-xl transition-shadow">
           <CardHeader className="pb-4">
             <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-green-100">
-                <FileText className="h-5 w-5 text-green-600" />
+              <div className="p-2 rounded-lg bg-green-100 dark:bg-green-900/30">
+                <FileText className="h-5 w-5 text-green-600 dark:text-green-400" />
               </div>
               <div>
                 <CardTitle className="text-xl">Statistiques rapides</CardTitle>
@@ -190,19 +190,19 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              <div className="flex justify-between items-center p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-green-100">
+              <div className="flex justify-between items-center p-3 rounded-lg bg-white/60 dark:bg-slate-700/60 backdrop-blur-sm border border-green-100 dark:border-slate-700">
                 <span className="text-sm font-medium text-foreground">Taux de présence</span>
-                <span className="text-sm font-bold text-green-600 bg-green-100 px-3 py-1 rounded-full">95%</span>
+                <span className="text-sm font-bold text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full">95%</span>
               </div>
-              <div className="flex justify-between items-center p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-green-100">
+              <div className="flex justify-between items-center p-3 rounded-lg bg-white/60 dark:bg-slate-700/60 backdrop-blur-sm border border-green-100 dark:border-slate-700">
                 <span className="text-sm font-medium text-foreground">Employés actifs</span>
-                <span className="text-sm font-bold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+                <span className="text-sm font-bold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-3 py-1 rounded-full">
                   {stats.totalEmployees} / {stats.totalEmployees}
                 </span>
               </div>
-              <div className="flex justify-between items-center p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-green-100">
+              <div className="flex justify-between items-center p-3 rounded-lg bg-white/60 dark:bg-slate-700/60 backdrop-blur-sm border border-green-100 dark:border-slate-700">
                 <span className="text-sm font-medium text-foreground">Congés approuvés</span>
-                <span className="text-sm font-bold text-yellow-600 bg-yellow-100 px-3 py-1 rounded-full">
+                <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 bg-yellow-100 dark:bg-yellow-900/30 px-3 py-1 rounded-full">
                   {getLeaves().filter((l) => l.status === "approved").length}
                 </span>
               </div>

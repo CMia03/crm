@@ -10,7 +10,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <input
         type={type}
         className={cn(
-          "flex h-10 w-full rounded-lg border-2 border-blue-200 bg-white px-4 py-2 text-sm shadow-sm transition-all duration-200 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-blue-500 focus-visible:ring-2 focus-visible:ring-blue-200 focus-visible:shadow-md hover:border-blue-300 disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-50 [&[type='date']]:!bg-white [&[type='date']]:!text-foreground [&[type='date']]:bg-white",
+          "flex h-10 w-full rounded-lg border-2 border-blue-200 dark:border-slate-600 bg-white dark:bg-slate-700 px-4 py-2 text-sm shadow-sm transition-all duration-200 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-800 focus-visible:shadow-md hover:border-blue-300 dark:hover:border-slate-500 disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-50 dark:disabled:bg-slate-800 [&[type='date']]:!bg-white dark:[&[type='date']]:!bg-slate-700 [&[type='date']]:!text-foreground [&[type='date']]:bg-white dark:[&[type='date']]:bg-slate-700",
           className
         )}
         style={type === "date" ? { 

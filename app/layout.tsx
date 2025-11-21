@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Sidebar } from "@/components/layout/sidebar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const roboto = localFont({
   src: [
@@ -81,18 +82,34 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (prefersDark) {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${roboto.variable} font-sans antialiased`}
       >
-        <div className="flex min-h-screen bg-gradient-to-br from-blue-50/50 via-white to-green-50/50">
-          <Sidebar />
-          <main className="flex-1 lg:ml-64 p-6 lg:p-8 min-h-screen">
-            <div className="max-w-7xl mx-auto">
-              {children}
-            </div>
-          </main>
-        </div>
+        <ThemeProvider>
+          <div className="flex min-h-screen bg-gradient-to-br from-blue-50/50 via-white to-green-50/50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+            <Sidebar />
+            <main className="flex-1 lg:ml-64 p-6 lg:p-8 min-h-screen">
+              <div className="max-w-7xl mx-auto">
+                {children}
+              </div>
+            </main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

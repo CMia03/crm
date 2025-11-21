@@ -194,7 +194,7 @@ export default function RecruitmentsPage() {
     <div className="space-y-4 sm:space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
             Recrutements
           </h1>
           <p className="text-sm sm:text-base text-muted-foreground mt-1">
@@ -211,7 +211,7 @@ export default function RecruitmentsPage() {
       </div>
 
       <Card className="overflow-hidden">
-        <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 border-b-2 border-blue-100">
+        <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 dark:from-slate-700/50 dark:to-slate-800/50 border-b-2 border-blue-100 dark:border-slate-700">
           <div>
             <CardTitle className="text-lg sm:text-xl">Liste des recrutements</CardTitle>
             <CardDescription className="text-xs sm:text-sm">
@@ -242,7 +242,7 @@ export default function RecruitmentsPage() {
                   </TableRow>
                 ) : (
                   recruitments.map((recruitment) => (
-                    <TableRow key={recruitment.id} className="hover:bg-blue-50/50 transition-colors">
+                    <TableRow key={recruitment.id} className="hover:bg-blue-50/50 dark:hover:bg-slate-700/50 transition-colors">
                       <TableCell className="font-medium">
                         {getPositionTitle(recruitment.positionId)}
                       </TableCell>
@@ -278,7 +278,7 @@ export default function RecruitmentsPage() {
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="h-8 w-8 hover:bg-blue-100"
+                            className="h-8 w-8 hover:bg-blue-100 dark:hover:bg-slate-700"
                             onClick={() => handleOpenApplicantDialog(recruitment)}
                             title="Ajouter un candidat"
                           >
@@ -287,7 +287,7 @@ export default function RecruitmentsPage() {
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="h-8 w-8 hover:bg-blue-100"
+                            className="h-8 w-8 hover:bg-blue-100 dark:hover:bg-slate-700"
                             onClick={() => handleOpenDialog(recruitment)}
                           >
                             <Edit className="h-4 w-4" />
@@ -309,7 +309,7 @@ export default function RecruitmentsPage() {
               </div>
             ) : (
               recruitments.map((recruitment) => (
-                <Card key={recruitment.id} className="border-2 border-blue-100 hover:border-blue-300 transition-colors">
+                <Card key={recruitment.id} className="border-2 border-blue-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-slate-600 transition-colors">
                   <CardContent className="p-4">
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
@@ -331,7 +331,7 @@ export default function RecruitmentsPage() {
                         {getStatusLabel(recruitment.status)}
                       </Badge>
                     </div>
-                    <div className="grid grid-cols-2 gap-3 pt-3 border-t border-blue-100">
+                    <div className="grid grid-cols-2 gap-3 pt-3 border-t border-blue-100 dark:border-slate-700">
                       <div>
                         <p className="text-xs text-muted-foreground mb-1">Date de publication</p>
                         <p className="text-sm font-medium">
@@ -347,14 +347,14 @@ export default function RecruitmentsPage() {
                       <div className="col-span-2">
                         <p className="text-xs text-muted-foreground mb-1">Candidats</p>
                         <div className="flex items-center gap-2">
-                          <Users className="h-4 w-4 text-blue-600" />
-                          <p className="text-sm font-bold text-blue-600">
+                          <Users className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                          <p className="text-sm font-bold text-blue-600 dark:text-blue-400">
                             {recruitment.applicants.length} candidat{recruitment.applicants.length > 1 ? "s" : ""}
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className="flex gap-2 mt-3 pt-3 border-t border-blue-100">
+                    <div className="flex gap-2 mt-3 pt-3 border-t border-blue-100 dark:border-slate-700">
                       <Button
                         variant="outline"
                         size="sm"
@@ -384,7 +384,7 @@ export default function RecruitmentsPage() {
 
       {recruitments.map((recruitment) => (
         <Card key={recruitment.id} className="overflow-hidden">
-          <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 border-b-2 border-blue-100">
+          <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 dark:from-slate-700/50 dark:to-slate-800/50 border-b-2 border-blue-100 dark:border-slate-700">
             <CardTitle className="text-lg sm:text-xl">
               Candidats - {getPositionTitle(recruitment.positionId)}
             </CardTitle>
@@ -449,7 +449,7 @@ export default function RecruitmentsPage() {
                               }
                               title="Planifier un entretien"
                             >
-                              <Check className="h-4 w-4 text-blue-600" />
+                              <Check className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                             </Button>
                           )}
                           {applicant.status === "interview" && (
@@ -466,7 +466,7 @@ export default function RecruitmentsPage() {
                                 }
                                 title="Embaucher"
                               >
-                                <Check className="h-4 w-4 text-green-600" />
+                                <Check className="h-4 w-4 text-green-600 dark:text-green-400" />
                               </Button>
                               <Button
                                 variant="ghost"
@@ -480,7 +480,7 @@ export default function RecruitmentsPage() {
                                 }
                                 title="Refuser"
                               >
-                                <X className="h-4 w-4 text-red-600" />
+                                <X className="h-4 w-4 text-red-600 dark:text-red-400" />
                               </Button>
                             </>
                           )}
@@ -495,7 +495,7 @@ export default function RecruitmentsPage() {
               {/* Mobile View - Cards for Applicants */}
               <div className="block lg:hidden space-y-3">
                 {recruitment.applicants.map((applicant) => (
-                  <Card key={applicant.id} className="border-2 border-blue-100">
+                  <Card key={applicant.id} className="border-2 border-blue-100 dark:border-slate-700">
                     <CardContent className="p-4">
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">
@@ -517,7 +517,7 @@ export default function RecruitmentsPage() {
                           {getApplicantStatusLabel(applicant.status)}
                         </Badge>
                       </div>
-                      <div className="grid grid-cols-2 gap-2 pt-3 border-t border-blue-100">
+                      <div className="grid grid-cols-2 gap-2 pt-3 border-t border-blue-100 dark:border-slate-700">
                         <div>
                           <p className="text-xs text-muted-foreground mb-1">Téléphone</p>
                           <p className="text-xs font-medium">{applicant.phone}</p>
@@ -530,7 +530,7 @@ export default function RecruitmentsPage() {
                         </div>
                       </div>
                       {applicant.status !== "hired" && (
-                        <div className="flex gap-2 mt-3 pt-3 border-t border-blue-100">
+                        <div className="flex gap-2 mt-3 pt-3 border-t border-blue-100 dark:border-slate-700">
                           {applicant.status === "pending" && (
                             <Button
                               variant="outline"
@@ -553,7 +553,7 @@ export default function RecruitmentsPage() {
                               <Button
                                 variant="outline"
                                 size="sm"
-                                className="flex-1 text-xs text-green-600 border-green-200"
+                                className="flex-1 text-xs text-green-600 dark:text-green-400 border-green-200 dark:border-green-800"
                                 onClick={() =>
                                   handleUpdateApplicantStatus(
                                     recruitment.id,
@@ -568,7 +568,7 @@ export default function RecruitmentsPage() {
                               <Button
                                 variant="outline"
                                 size="sm"
-                                className="flex-1 text-xs text-red-600 border-red-200"
+                                className="flex-1 text-xs text-red-600 dark:text-red-400 border-red-200 dark:border-red-800"
                                 onClick={() =>
                                   handleUpdateApplicantStatus(
                                     recruitment.id,
@@ -607,12 +607,12 @@ export default function RecruitmentsPage() {
             </DialogDescription>
           </DialogHeader>
 
-          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white">
+          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white dark:bg-slate-800">
             <div className="space-y-2">
               <Label htmlFor="positionId">Poste</Label>
               <select
                 id="positionId"
-                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                className="flex h-9 w-full rounded-md border border-input dark:border-slate-600 bg-transparent dark:bg-slate-700 px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground"
                 value={formData.positionId}
                 onChange={(e) =>
                   setFormData({ ...formData, positionId: e.target.value })
@@ -631,7 +631,7 @@ export default function RecruitmentsPage() {
               <Label htmlFor="departmentId">Département</Label>
               <select
                 id="departmentId"
-                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                className="flex h-9 w-full rounded-md border border-input dark:border-slate-600 bg-transparent dark:bg-slate-700 px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground"
                 value={formData.departmentId}
                 onChange={(e) =>
                   setFormData({ ...formData, departmentId: e.target.value })
@@ -675,7 +675,7 @@ export default function RecruitmentsPage() {
               <Label htmlFor="status">Statut</Label>
               <select
                 id="status"
-                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                className="flex h-9 w-full rounded-md border border-input dark:border-slate-600 bg-transparent dark:bg-slate-700 px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground"
                 value={formData.status}
                 onChange={(e) =>
                   setFormData({
@@ -718,7 +718,7 @@ export default function RecruitmentsPage() {
             </DialogDescription>
           </DialogHeader>
 
-          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white">
+          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white dark:bg-slate-800">
             <div className="space-y-2">
               <Label htmlFor="applicantName" className="text-sm font-semibold">Nom complet</Label>
               <Input

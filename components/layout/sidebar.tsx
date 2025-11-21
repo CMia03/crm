@@ -42,12 +42,12 @@ export function Sidebar() {
 
       <aside
         className={cn(
-          "fixed top-0 left-0 z-40 h-screen w-64 bg-white lg:bg-gradient-to-b lg:from-white lg:via-blue-50/30 lg:to-green-50/30 border-r-2 border-blue-200 shadow-xl transition-transform lg:translate-x-0",
+          "fixed top-0 left-0 z-40 h-screen w-64 bg-white dark:bg-slate-800 lg:bg-gradient-to-b lg:from-white lg:via-blue-50/30 lg:to-green-50/30 dark:lg:from-slate-800 dark:lg:via-slate-800/50 dark:lg:to-slate-900 border-r-2 border-blue-200 dark:border-slate-700 shadow-xl transition-transform lg:translate-x-0",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
         <div className="h-full px-4 py-4 overflow-y-auto">
-          <div className="mb-8 mt-12 lg:mt-4 pb-6 border-b-2 border-blue-100">
+          <div className="mb-8 mt-12 lg:mt-4 pb-6 border-b-2 border-blue-100 dark:border-slate-700">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-green-500 shadow-md">
                 <LayoutDashboard className="h-5 w-5 text-white" />
@@ -63,9 +63,9 @@ export function Sidebar() {
             {navigation.map((item, index) => {
               const isActive = pathname === item.href
               const colors = [
-                { bg: "bg-blue-500", hover: "hover:bg-blue-100", text: "text-blue-600", active: "bg-blue-500" },
-                { bg: "bg-green-500", hover: "hover:bg-green-100", text: "text-green-600", active: "bg-green-500" },
-                { bg: "bg-yellow-500", hover: "hover:bg-yellow-100", text: "text-yellow-600", active: "bg-yellow-500" },
+                { bg: "bg-blue-500", hover: "hover:bg-blue-100 dark:hover:bg-blue-900/30", text: "text-blue-600 dark:text-blue-400", active: "bg-blue-500" },
+                { bg: "bg-green-500", hover: "hover:bg-green-100 dark:hover:bg-green-900/30", text: "text-green-600 dark:text-green-400", active: "bg-green-500" },
+                { bg: "bg-yellow-500", hover: "hover:bg-yellow-100 dark:hover:bg-yellow-900/30", text: "text-yellow-600 dark:text-yellow-400", active: "bg-yellow-500" },
               ]
               const color = colors[index % 3]
               

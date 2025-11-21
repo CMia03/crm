@@ -13,7 +13,7 @@ const badgeVariants = cva(
           "border-transparent bg-gradient-to-r from-gray-500 to-gray-600 text-white shadow-md hover:shadow-lg",
         destructive:
           "border-transparent bg-gradient-to-r from-red-500 to-red-600 text-white shadow-md hover:shadow-lg",
-        outline: "border-2 border-blue-200 text-blue-600 bg-blue-50 hover:bg-blue-100",
+        outline: "border-2 border-blue-200 dark:border-slate-600 text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600",
         success: "border-transparent bg-gradient-to-r from-green-500 to-green-600 text-white shadow-md hover:shadow-lg",
         warning: "border-transparent bg-gradient-to-r from-yellow-500 to-yellow-600 text-white shadow-md hover:shadow-lg",
       },

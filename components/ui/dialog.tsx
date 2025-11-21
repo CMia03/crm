@@ -53,7 +53,7 @@ const DialogContent = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "relative z-50 grid w-full max-w-lg gap-0 border-2 border-blue-200 bg-white shadow-2xl duration-200 rounded-2xl overflow-hidden",
+        "relative z-50 grid w-full max-w-lg gap-0 border-2 border-blue-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-2xl duration-200 rounded-2xl overflow-hidden",
         className
       )}
       {...props}
@@ -61,7 +61,7 @@ const DialogContent = React.forwardRef<
       <Button
         variant="ghost"
         size="icon"
-        className="absolute top-4 right-4 z-10 h-8 w-8 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 hover:text-blue-700 shadow-sm hover:shadow-md transition-all"
+        className="absolute top-4 right-4 z-10 h-8 w-8 rounded-full bg-blue-50 dark:bg-slate-700 hover:bg-blue-100 dark:hover:bg-slate-600 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 shadow-sm hover:shadow-md transition-all"
         onClick={() => onOpenChange(false)}
       >
         <X className="h-4 w-4" />
@@ -78,7 +78,7 @@ const DialogHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "flex flex-col space-y-2 px-8 pt-6 pb-4  from-blue-50 via-green-50 to-yellow-50 border-b-2 border-blue-200",
+      "flex flex-col space-y-2 px-8 pt-6 pb-4 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50 dark:from-slate-700 dark:via-slate-800 dark:to-slate-700 border-b-2 border-blue-200 dark:border-slate-700",
       className
     )}
     {...props}
@@ -93,7 +93,7 @@ const DialogTitle = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "text-xl font-bold leading-none tracking-tight bg-blue-950 from-blue-600 via-green-600 to-yellow-600 bg-clip-text text-transparent",
+      "text-xl font-bold leading-none tracking-tight bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 dark:from-blue-400 dark:via-green-400 dark:to-yellow-400 bg-clip-text text-transparent",
       className
     )}
     {...props}
@@ -119,7 +119,7 @@ const DialogFooter = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-3 px-8 py-4 bg-gradient-to-r from-blue-50/50 via-green-50/50 to-yellow-50/50 border-t-2 border-blue-100",
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-3 px-8 py-4 bg-gradient-to-r from-blue-50/50 via-green-50/50 to-yellow-50/50 dark:from-slate-700/50 dark:via-slate-800/50 dark:to-slate-700/50 border-t-2 border-blue-100 dark:border-slate-700",
       className
     )}
     {...props}

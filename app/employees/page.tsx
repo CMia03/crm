@@ -186,7 +186,7 @@ export default function EmployeesPage() {
     <div className="space-y-4 sm:space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
             Employés
           </h1>
           <p className="text-sm sm:text-base text-muted-foreground mt-1">
@@ -203,7 +203,7 @@ export default function EmployeesPage() {
       </div>
 
       <Card className="overflow-hidden">
-        <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 border-b-2 border-blue-100">
+        <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 dark:from-slate-700/50 dark:to-slate-800/50 border-b-2 border-blue-100 dark:border-slate-700">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <div>
               <CardTitle className="text-lg sm:text-xl">Liste des employés</CardTitle>
@@ -231,7 +231,7 @@ export default function EmployeesPage() {
               </div>
             ) : (
               filteredEmployees.map((employee) => (
-                <Card key={employee.id} className="border-2 border-blue-100 hover:border-blue-300 transition-colors">
+                <Card key={employee.id} className="border-2 border-blue-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-slate-600 transition-colors">
                   <CardContent className="p-4">
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
@@ -259,7 +259,7 @@ export default function EmployeesPage() {
                         </Button>
                       </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-3 pt-3 border-t border-blue-100">
+                    <div className="grid grid-cols-2 gap-3 pt-3 border-t border-blue-100 dark:border-slate-700">
                       <div>
                         <p className="text-xs text-muted-foreground mb-1">Département</p>
                         <p className="text-sm font-medium">{getDepartmentName(employee.departmentId)}</p>
@@ -323,7 +323,7 @@ export default function EmployeesPage() {
                   </TableRow>
                 ) : (
                   filteredEmployees.map((employee) => (
-                    <TableRow key={employee.id} className="hover:bg-blue-50/50 transition-colors">
+                    <TableRow key={employee.id} className="hover:bg-blue-50/50 dark:hover:bg-slate-700/50 transition-colors">
                       <TableCell className="font-medium">
                         {employee.firstName} {employee.lastName}
                       </TableCell>
@@ -392,7 +392,7 @@ export default function EmployeesPage() {
             </DialogDescription>
           </DialogHeader>
 
-          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white">
+          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white dark:bg-slate-800">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="firstName" className="text-sm font-semibold">Prénom</Label>
@@ -533,8 +533,8 @@ export default function EmployeesPage() {
               />
             </div>
 
-            <div className="border-t-2 border-blue-100 pt-4 sm:pt-6 mt-2">
-              <h3 className="text-sm sm:text-base font-bold mb-4 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+            <div className="border-t-2 border-blue-100 dark:border-slate-700 pt-4 sm:pt-6 mt-2">
+              <h3 className="text-sm sm:text-base font-bold mb-4 bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
                 Contact d'urgence
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

@@ -157,7 +157,7 @@ export default function PositionsPage() {
     <div className="space-y-4 sm:space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
             Postes
           </h1>
           <p className="text-sm sm:text-base text-muted-foreground mt-1">
@@ -174,7 +174,7 @@ export default function PositionsPage() {
       </div>
 
       <Card className="overflow-hidden">
-        <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 border-b-2 border-blue-100">
+        <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 dark:from-slate-700/50 dark:to-slate-800/50 border-b-2 border-blue-100 dark:border-slate-700">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <div>
               <CardTitle className="text-lg sm:text-xl">Liste des postes</CardTitle>
@@ -202,7 +202,7 @@ export default function PositionsPage() {
               </div>
             ) : (
               filteredPositions.map((position) => (
-                <Card key={position.id} className="border-2 border-blue-100 hover:border-blue-300 transition-colors">
+                <Card key={position.id} className="border-2 border-blue-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-slate-600 transition-colors">
                   <CardContent className="p-4">
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
@@ -228,7 +228,7 @@ export default function PositionsPage() {
                         </Button>
                       </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-3 pt-3 border-t border-blue-100">
+                    <div className="grid grid-cols-2 gap-3 pt-3 border-t border-blue-100 dark:border-slate-700">
                       <div>
                         <p className="text-xs text-muted-foreground mb-1">Niveau</p>
                         <p className="text-sm font-medium">{position.level}</p>
@@ -241,7 +241,7 @@ export default function PositionsPage() {
                       </div>
                       <div className="col-span-2">
                         <p className="text-xs text-muted-foreground mb-1">Salaire</p>
-                        <p className="text-sm font-bold text-blue-600">
+                        <p className="text-sm font-bold text-blue-600 dark:text-blue-400">
                           {new Intl.NumberFormat("fr-FR", {
                             style: "currency",
                             currency: "EUR",
@@ -282,11 +282,11 @@ export default function PositionsPage() {
                   </TableRow>
                 ) : (
                   filteredPositions.map((position) => (
-                    <TableRow key={position.id} className="hover:bg-blue-50/50 transition-colors">
+                    <TableRow key={position.id} className="hover:bg-blue-50/50 dark:hover:bg-slate-700/50 transition-colors">
                       <TableCell className="font-medium">{position.title}</TableCell>
                       <TableCell>{getDepartmentName(position.departmentId)}</TableCell>
                       <TableCell>{position.level}</TableCell>
-                      <TableCell className="font-semibold text-blue-600">
+                      <TableCell className="font-semibold text-blue-600 dark:text-blue-400">
                         {new Intl.NumberFormat("fr-FR", {
                           style: "currency",
                           currency: "EUR",
@@ -344,7 +344,7 @@ export default function PositionsPage() {
             </DialogDescription>
           </DialogHeader>
 
-          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white">
+          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white dark:bg-slate-800">
             <div className="space-y-2">
               <Label htmlFor="title" className="text-sm font-semibold">Titre</Label>
               <Input
@@ -360,7 +360,7 @@ export default function PositionsPage() {
                 <Label htmlFor="departmentId">Département</Label>
                 <select
                   id="departmentId"
-                  className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  className="flex h-9 w-full rounded-md border border-input dark:border-slate-600 bg-transparent dark:bg-slate-700 px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground"
                   value={formData.departmentId}
                   onChange={(e) =>
                     setFormData({ ...formData, departmentId: e.target.value })
@@ -378,7 +378,7 @@ export default function PositionsPage() {
                 <Label htmlFor="level">Niveau</Label>
                 <select
                   id="level"
-                  className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  className="flex h-9 w-full rounded-md border border-input dark:border-slate-600 bg-transparent dark:bg-slate-700 px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground"
                   value={formData.level}
                   onChange={(e) => setFormData({ ...formData, level: e.target.value })}
                 >

@@ -172,16 +172,16 @@ export default function EvaluationsPage() {
   }
 
   const getScoreColor = (score: number) => {
-    if (score >= 4) return "text-green-600"
-    if (score >= 3) return "text-yellow-600"
-    return "text-red-600"
+    if (score >= 4) return "text-green-600 dark:text-green-400"
+    if (score >= 3) return "text-yellow-600 dark:text-yellow-400"
+    return "text-red-600 dark:text-red-400"
   }
 
   return (
     <div className="space-y-4 sm:space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
             Évaluations
           </h1>
           <p className="text-sm sm:text-base text-muted-foreground mt-1">
@@ -198,7 +198,7 @@ export default function EvaluationsPage() {
       </div>
 
       <Card className="overflow-hidden">
-        <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 border-b-2 border-blue-100">
+        <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 dark:from-slate-700/50 dark:to-slate-800/50 border-b-2 border-blue-100 dark:border-slate-700">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <div>
               <CardTitle className="text-lg sm:text-xl">Liste des évaluations</CardTitle>
@@ -226,7 +226,7 @@ export default function EvaluationsPage() {
               </div>
             ) : (
               filteredEvaluations.map((evaluation) => (
-                <Card key={evaluation.id} className="border-2 border-blue-100 hover:border-blue-300 transition-colors">
+                <Card key={evaluation.id} className="border-2 border-blue-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-slate-600 transition-colors">
                   <CardContent className="p-4">
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
@@ -265,7 +265,7 @@ export default function EvaluationsPage() {
                         </p>
                       </div>
                     </div>
-                    <div className="pt-3 border-t border-blue-100">
+                    <div className="pt-3 border-t border-blue-100 dark:border-slate-700">
                       <div className="flex items-center justify-between">
                         <p className="text-xs text-muted-foreground">Leadership</p>
                         <p className={`text-sm font-semibold ${getScoreColor(evaluation.scores.leadership)}`}>
@@ -313,7 +313,7 @@ export default function EvaluationsPage() {
                   </TableRow>
                 ) : (
                   filteredEvaluations.map((evaluation) => (
-                    <TableRow key={evaluation.id} className="hover:bg-blue-50/50 transition-colors">
+                    <TableRow key={evaluation.id} className="hover:bg-blue-50/50 dark:hover:bg-slate-700/50 transition-colors">
                       <TableCell className="font-medium">
                         {getEmployeeName(evaluation.employeeId)}
                       </TableCell>
@@ -374,13 +374,13 @@ export default function EvaluationsPage() {
             </DialogDescription>
           </DialogHeader>
 
-          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white">
+          <div className="grid gap-4 sm:gap-6 px-2 sm:px-6 py-4 sm:py-6 bg-white dark:bg-slate-800">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="employeeId">Employé</Label>
                 <select
                   id="employeeId"
-                  className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  className="flex h-9 w-full rounded-md border border-input dark:border-slate-600 bg-transparent dark:bg-slate-700 px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-foreground"
                   value={formData.employeeId}
                   onChange={(e) =>
                     setFormData({ ...formData, employeeId: e.target.value })

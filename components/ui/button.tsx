@@ -12,11 +12,11 @@ const buttonVariants = cva(
         destructive:
           "bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-red-500",
         outline:
-          "border-2 border-blue-200 bg-white text-blue-600 shadow-sm hover:bg-blue-50 hover:border-blue-300 hover:scale-105 active:scale-95 focus-visible:ring-blue-500",
+          "border-2 border-blue-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 shadow-sm hover:bg-blue-50 dark:hover:bg-slate-600 hover:border-blue-300 dark:hover:border-slate-500 hover:scale-105 active:scale-95 focus-visible:ring-blue-500 dark:focus-visible:ring-blue-400",
         secondary:
           "bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-green-500",
-        ghost: "hover:bg-blue-50 hover:text-blue-600 active:bg-blue-100",
-        link: "text-blue-600 underline-offset-4 hover:underline hover:text-blue-700",
+        ghost: "hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-blue-400 active:bg-blue-100 dark:active:bg-slate-600",
+        link: "text-blue-600 dark:text-blue-400 underline-offset-4 hover:underline hover:text-blue-700 dark:hover:text-blue-300",
       },
       size: {
         default: "h-9 px-4 py-2",
