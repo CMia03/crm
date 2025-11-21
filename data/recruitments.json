@@ -1,0 +1,78 @@
+[
+  {
+    "id": "1",
+    "positionId": "1",
+    "departmentId": "2",
+    "status": "open",
+    "postedDate": "2024-06-01",
+    "deadline": "2024-07-15",
+    "applicants": [
+      {
+        "id": "1",
+        "name": "Jean Dupont",
+        "email": "jean.dupont@email.com",
+        "phone": "+33 6 11 22 33 44",
+        "resume": "CV_Jean_Dupont.pdf",
+        "status": "interview",
+        "appliedDate": "2024-06-10",
+        "interviewDate": "2024-06-25",
+        "notes": "Bon profil technique, à rencontrer"
+      },
+      {
+        "id": "2",
+        "name": "Marie Laurent",
+        "email": "marie.laurent@email.com",
+        "phone": "+33 6 22 33 44 55",
+        "resume": "CV_Marie_Laurent.pdf",
+        "status": "pending",
+        "appliedDate": "2024-06-12",
+        "notes": "En attente de revue"
+      }
+    ],
+    "hiredCandidate": null
+  },
+  {
+    "id": "2",
+    "positionId": "4",
+    "departmentId": "4",
+    "status": "closed",
+    "postedDate": "2024-05-01",
+    "deadline": "2024-06-01",
+    "applicants": [
+      {
+        "id": "1",
+        "name": "Pierre Moreau",
+        "email": "pierre.moreau@email.com",
+        "phone": "+33 6 33 44 55 66",
+        "resume": "CV_Pierre_Moreau.pdf",
+        "status": "hired",
+        "appliedDate": "2024-05-10",
+        "interviewDate": "2024-05-20",
+        "notes": "Excellent candidat, embauché"
+      }
+    ],
+    "hiredCandidate": "1"
+  },
+  {
+    "id": "3",
+    "positionId": "3",
+    "departmentId": "3",
+    "status": "open",
+    "postedDate": "2024-06-10",
+    "deadline": "2024-07-30",
+    "applicants": [
+      {
+        "id": "1",
+        "name": "Sophie Bernard",
+        "email": "sophie.bernard@email.com",
+        "phone": "+33 6 44 55 66 77",
+        "resume": "CV_Sophie_Bernard.pdf",
+        "status": "rejected",
+        "appliedDate": "2024-06-15",
+        "notes": "Profil ne correspond pas aux exigences"
+      }
+    ],
+    "hiredCandidate": null
+  }
+]
+

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "title": "Formation React Avancé",
+    "description": "Formation approfondie sur React, hooks, et patterns avancés",
+    "instructor": "Thomas Dubois",
+    "duration": 3,
+    "date": "2024-07-15",
+    "location": "Salle de formation A",
+    "maxParticipants": 15,
+    "participants": ["1", "6"],
+    "status": "scheduled",
+    "type": "technical"
+  },
+  {
+    "id": "2",
+    "title": "Gestion du Stress et Bien-être au Travail",
+    "description": "Techniques de gestion du stress et promotion du bien-être",
+    "instructor": "Sophie Martin",
+    "duration": 2,
+    "date": "2024-06-20",
+    "location": "Salle de conférence",
+    "maxParticipants": 20,
+    "participants": ["1", "2", "3", "4", "5"],
+    "status": "completed",
+    "type": "soft-skills"
+  },
+  {
+    "id": "3",
+    "title": "Leadership et Management",
+    "description": "Développer les compétences en leadership et management d'équipe",
+    "instructor": "Consultant externe",
+    "duration": 5,
+    "date": "2024-08-10",
+    "location": "Centre de formation",
+    "maxParticipants": 10,
+    "participants": ["1", "2"],
+    "status": "scheduled",
+    "type": "management"
+  },
+  {
+    "id": "4",
+    "title": "Marketing Digital - Nouvelles Tendances",
+    "description": "Formation sur les dernières tendances du marketing digital",
+    "instructor": "Emma Bernard",
+    "duration": 2,
+    "date": "2024-07-05",
+    "location": "Salle de formation B",
+    "maxParticipants": 12,
+    "participants": ["3"],
+    "status": "scheduled",
+    "type": "technical"
+  },
+  {
+    "id": "5",
+    "title": "Comptabilité et Fiscalité 2024",
+    "description": "Mise à jour sur les nouvelles réglementations comptables et fiscales",
+    "instructor": "Expert-comptable externe",
+    "duration": 4,
+    "date": "2024-09-01",
+    "location": "Salle de formation A",
+    "maxParticipants": 15,
+    "participants": ["5"],
+    "status": "scheduled",
+    "type": "technical"
+  }
+]
+

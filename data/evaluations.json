@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1",
+    "employeeId": "1",
+    "evaluatorId": "1",
+    "period": "2024-Q1",
+    "evaluationDate": "2024-04-01",
+    "scores": {
+      "performance": 4.5,
+      "communication": 4.0,
+      "teamwork": 4.5,
+      "initiative": 4.2,
+      "leadership": 3.8
+    },
+    "overallScore": 4.2,
+    "strengths": ["Excellente gestion de projet", "Bonne communication", "Esprit d'équipe"],
+    "improvements": ["Développer le leadership", "Prendre plus d'initiatives"],
+    "goals": ["Améliorer les compétences en leadership", "Mentorer 2 nouveaux employés"],
+    "status": "completed"
+  },
+  {
+    "id": "2",
+    "employeeId": "2",
+    "evaluatorId": "1",
+    "period": "2024-Q1",
+    "evaluationDate": "2024-04-05",
+    "scores": {
+      "performance": 4.8,
+      "communication": 4.5,
+      "teamwork": 4.7,
+      "initiative": 4.6,
+      "leadership": 4.5
+    },
+    "overallScore": 4.6,
+    "strengths": ["Leadership exceptionnel", "Excellente performance technique", "Vision stratégique"],
+    "improvements": ["Continuer à développer l'équipe"],
+    "goals": ["Lancer 3 nouveaux projets", "Former 5 développeurs"],
+    "status": "completed"
+  },
+  {
+    "id": "3",
+    "employeeId": "3",
+    "evaluatorId": "1",
+    "period": "2024-Q1",
+    "evaluationDate": "2024-04-10",
+    "scores": {
+      "performance": 4.3,
+      "communication": 4.7,
+      "teamwork": 4.4,
+      "initiative": 4.5,
+      "leadership": 4.0
+    },
+    "overallScore": 4.4,
+    "strengths": ["Excellente communication", "Créativité", "Résultats marketing"],
+    "improvements": ["Améliorer la planification stratégique"],
+    "goals": ["Augmenter le ROI marketing de 20%", "Lancer 2 nouvelles campagnes"],
+    "status": "completed"
+  },
+  {
+    "id": "4",
+    "employeeId": "4",
+    "evaluatorId": "1",
+    "period": "2024-Q1",
+    "evaluationDate": "2024-04-15",
+    "scores": {
+      "performance": 3.8,
+      "communication": 3.5,
+      "teamwork": 3.9,
+      "initiative": 3.6,
+      "leadership": 3.2
+    },
+    "overallScore": 3.6,
+    "strengths": ["Motivation", "Relation client"],
+    "improvements": ["Améliorer la communication", "Développer les compétences techniques"],
+    "goals": ["Atteindre 120% des objectifs de vente", "Suivre une formation commerciale"],
+    "status": "completed"
+  }
+]
+

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "1",
+    "title": "Développeur Full Stack",
+    "departmentId": "2",
+    "level": "Senior",
+    "salaryRange": {
+      "min": 60000,
+      "max": 90000
+    },
+    "requirements": ["React", "Node.js", "TypeScript", "5 ans d'expérience"],
+    "status": "active"
+  },
+  {
+    "id": "2",
+    "title": "Chef de Projet",
+    "departmentId": "2",
+    "level": "Senior",
+    "salaryRange": {
+      "min": 70000,
+      "max": 100000
+    },
+    "requirements": ["Gestion de projet", "Agile", "Scrum", "7 ans d'expérience"],
+    "status": "active"
+  },
+  {
+    "id": "3",
+    "title": "Responsable Marketing Digital",
+    "departmentId": "3",
+    "level": "Manager",
+    "salaryRange": {
+      "min": 65000,
+      "max": 95000
+    },
+    "requirements": ["SEO", "SEM", "Analytics", "5 ans d'expérience"],
+    "status": "active"
+  },
+  {
+    "id": "4",
+    "title": "Commercial B2B",
+    "departmentId": "4",
+    "level": "Junior",
+    "salaryRange": {
+      "min": 35000,
+      "max": 50000
+    },
+    "requirements": ["Relation client", "Négociation", "2 ans d'expérience"],
+    "status": "active"
+  },
+  {
+    "id": "5",
+    "title": "Comptable",
+    "departmentId": "5",
+    "level": "Intermediate",
+    "salaryRange": {
+      "min": 40000,
+      "max": 55000
+    },
+    "requirements": ["Comptabilité générale", "Fiscalité", "3 ans d'expérience"],
+    "status": "active"
+  }
+]
+

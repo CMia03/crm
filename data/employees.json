@@ -1,0 +1,117 @@
+[
+  {
+    "id": "1",
+    "firstName": "Sophie",
+    "lastName": "Martin",
+    "email": "sophie.martin@company.com",
+    "phone": "+33 6 12 34 56 78",
+    "positionId": "1",
+    "departmentId": "1",
+    "hireDate": "2020-03-15",
+    "salary": 75000,
+    "status": "active",
+    "address": "123 Rue de la Paix, 75001 Paris",
+    "birthDate": "1985-05-20",
+    "emergencyContact": {
+      "name": "Jean Martin",
+      "phone": "+33 6 98 76 54 32",
+      "relation": "Conjoint"
+    }
+  },
+  {
+    "id": "2",
+    "firstName": "Thomas",
+    "lastName": "Dubois",
+    "email": "thomas.dubois@company.com",
+    "phone": "+33 6 23 45 67 89",
+    "positionId": "2",
+    "departmentId": "2",
+    "hireDate": "2019-06-01",
+    "salary": 85000,
+    "status": "active",
+    "address": "456 Avenue des Champs, 75008 Paris",
+    "birthDate": "1982-08-12",
+    "emergencyContact": {
+      "name": "Marie Dubois",
+      "phone": "+33 6 87 65 43 21",
+      "relation": "Conjointe"
+    }
+  },
+  {
+    "id": "3",
+    "firstName": "Emma",
+    "lastName": "Bernard",
+    "email": "emma.bernard@company.com",
+    "phone": "+33 6 34 56 78 90",
+    "positionId": "3",
+    "departmentId": "3",
+    "hireDate": "2021-09-10",
+    "salary": 80000,
+    "status": "active",
+    "address": "789 Boulevard Saint-Germain, 75006 Paris",
+    "birthDate": "1990-11-25",
+    "emergencyContact": {
+      "name": "Pierre Bernard",
+      "phone": "+33 6 76 54 32 10",
+      "relation": "Père"
+    }
+  },
+  {
+    "id": "4",
+    "firstName": "Lucas",
+    "lastName": "Petit",
+    "email": "lucas.petit@company.com",
+    "phone": "+33 6 45 67 89 01",
+    "positionId": "4",
+    "departmentId": "4",
+    "hireDate": "2022-01-20",
+    "salary": 42000,
+    "status": "active",
+    "address": "321 Rue de Rivoli, 75004 Paris",
+    "birthDate": "1995-02-14",
+    "emergencyContact": {
+      "name": "Claire Petit",
+      "phone": "+33 6 65 43 21 09",
+      "relation": "Sœur"
+    }
+  },
+  {
+    "id": "5",
+    "firstName": "Marie",
+    "lastName": "Lefebvre",
+    "email": "marie.lefebvre@company.com",
+    "phone": "+33 6 56 78 90 12",
+    "positionId": "5",
+    "departmentId": "5",
+    "hireDate": "2020-11-05",
+    "salary": 48000,
+    "status": "active",
+    "address": "654 Avenue de la République, 75011 Paris",
+    "birthDate": "1988-07-30",
+    "emergencyContact": {
+      "name": "Paul Lefebvre",
+      "phone": "+33 6 54 32 10 98",
+      "relation": "Conjoint"
+    }
+  },
+  {
+    "id": "6",
+    "firstName": "Antoine",
+    "lastName": "Moreau",
+    "email": "antoine.moreau@company.com",
+    "phone": "+33 6 67 89 01 23",
+    "positionId": "1",
+    "departmentId": "2",
+    "hireDate": "2023-04-12",
+    "salary": 68000,
+    "status": "active",
+    "address": "987 Rue de Vaugirard, 75015 Paris",
+    "birthDate": "1992-09-18",
+    "emergencyContact": {
+      "name": "Julie Moreau",
+      "phone": "+33 6 43 21 09 87",
+      "relation": "Conjointe"
+    }
+  }
+]
+

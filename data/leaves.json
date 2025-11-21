@@ -1,0 +1,67 @@
+[
+  {
+    "id": "1",
+    "employeeId": "1",
+    "type": "vacation",
+    "startDate": "2024-07-15",
+    "endDate": "2024-07-22",
+    "days": 6,
+    "status": "approved",
+    "reason": "Vacances d'été",
+    "submittedAt": "2024-06-01",
+    "approvedBy": "1",
+    "approvedAt": "2024-06-05"
+  },
+  {
+    "id": "2",
+    "employeeId": "2",
+    "type": "sick",
+    "startDate": "2024-06-10",
+    "endDate": "2024-06-12",
+    "days": 3,
+    "status": "approved",
+    "reason": "Arrêt maladie",
+    "submittedAt": "2024-06-09",
+    "approvedBy": "1",
+    "approvedAt": "2024-06-09"
+  },
+  {
+    "id": "3",
+    "employeeId": "3",
+    "type": "vacation",
+    "startDate": "2024-08-01",
+    "endDate": "2024-08-15",
+    "days": 11,
+    "status": "pending",
+    "reason": "Vacances familiales",
+    "submittedAt": "2024-06-15"
+  },
+  {
+    "id": "4",
+    "employeeId": "4",
+    "type": "personal",
+    "startDate": "2024-06-20",
+    "endDate": "2024-06-21",
+    "days": 2,
+    "status": "approved",
+    "reason": "Rendez-vous personnel",
+    "submittedAt": "2024-06-18",
+    "approvedBy": "1",
+    "approvedAt": "2024-06-19"
+  },
+  {
+    "id": "5",
+    "employeeId": "5",
+    "type": "vacation",
+    "startDate": "2024-09-01",
+    "endDate": "2024-09-08",
+    "days": 6,
+    "status": "rejected",
+    "reason": "Vacances",
+    "submittedAt": "2024-06-10",
+    "rejectedBy": "1",
+    "rejectedAt": "2024-06-12",
+    "rejectionReason": "Conflit avec période de clôture comptable"
+  }
+]
+
