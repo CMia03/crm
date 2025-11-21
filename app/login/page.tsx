@@ -57,10 +57,10 @@ export default function LoginPage() {
           </div>
           <div>
             <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
-              HR Manager
+              CRM Manager
             </CardTitle>
             <CardDescription className="text-sm mt-1">
-              Système de gestion des ressources humaines
+            CRM & Management Interne
             </CardDescription>
           </div>
         </CardHeader>

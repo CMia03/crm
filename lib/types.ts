@@ -124,3 +124,122 @@ export interface User {
   role: "admin" | "manager" | "user"
 }
 
+// Module Éducation / eLearning
+export interface Student {
+  id: string
+  firstName: string
+  lastName: string
+  email: string
+  phone: string
+  enrollmentDate: string
+  status: "active" | "inactive" | "graduated" | "suspended"
+  program?: string
+  level?: string
+  address?: string
+  birthDate?: string
+}
+
+export interface OnlineCourse {
+  id: string
+  title: string
+  description: string
+  instructor: string
+  category: string
+  duration: number // en heures
+  level: "beginner" | "intermediate" | "advanced"
+  price: number
+  status: "draft" | "published" | "archived"
+  createdAt: string
+  updatedAt: string
+  enrolledStudents: string[] // IDs des étudiants
+  modules: CourseModule[]
+  requirements?: string[]
+  learningObjectives?: string[]
+}
+
+export interface CourseModule {
+  id: string
+  title: string
+  description: string
+  order: number
+  content: string // URL ou contenu
+  duration: number // en minutes
+  type: "video" | "text" | "interactive" | "assignment"
+}
+
+export interface Quiz {
+  id: string
+  courseId: string
+  title: string
+  description: string
+  questions: QuizQuestion[]
+  passingScore: number // Score minimum pour réussir (en %)
+  timeLimit?: number // en minutes
+  attemptsAllowed: number
+  status: "draft" | "published" | "archived"
+  createdAt: string
+}
+
+export interface QuizQuestion {
+  id: string
+  question: string
+  type: "multiple-choice" | "true-false" | "short-answer" | "essay"
+  options?: string[] // Pour multiple-choice
+  correctAnswer: string | string[]
+  points: number
+  explanation?: string
+}
+
+export interface QuizAttempt {
+  id: string
+  quizId: string
+  studentId: string
+  answers: Record<string, string | string[]> // questionId -> answer
+  score: number
+  maxScore: number
+  percentage: number
+  passed: boolean
+  completedAt: string
+  timeSpent: number // en minutes
+  attemptNumber: number
+}
+
+export interface Certification {
+  id: string
+  title: string
+  description: string
+  courseId?: string
+  requirements: string[] // Conditions pour obtenir la certification
+  validityPeriod?: number // en mois
+  issuer: string
+  status: "active" | "inactive"
+  createdAt: string
+  issuedCertificates: IssuedCertificate[]
+}
+
+export interface IssuedCertificate {
+  id: string
+  certificationId: string
+  studentId: string
+  issuedDate: string
+  expiryDate?: string
+  certificateNumber: string
+  status: "active" | "expired" | "revoked"
+  issuedBy: string
+}
+
+export interface StudentProgress {
+  id: string
+  studentId: string
+  courseId: string
+  progress: number // en pourcentage
+  completedModules: string[] // IDs des modules complétés
+  lastAccessedAt: string
+  enrolledAt: string
+  completedAt?: string
+  status: "enrolled" | "in-progress" | "completed" | "dropped"
+  timeSpent: number // en minutes
+  quizAttempts: string[] // IDs des tentatives de quiz
+  certificates: string[] // IDs des certificats obtenus
+}
+

@@ -17,6 +17,7 @@ export default function Dashboard() {
     totalEmployees: 0,
     totalDepartments: 0,
     pendingLeaves: 0,
+    approvedLeaves: 0,
     totalEvaluations: 0,
     upcomingTrainings: 0,
     openRecruitments: 0,
@@ -31,6 +32,7 @@ export default function Dashboard() {
     const recruitments = getRecruitments()
 
     const pendingLeaves = leaves.filter((l) => l.status === "pending").length
+    const approvedLeaves = leaves.filter((l) => l.status === "approved").length
     const upcomingTrainings = trainings.filter(
       (t) => t.status === "scheduled" && new Date(t.date) >= new Date()
     ).length
@@ -40,6 +42,7 @@ export default function Dashboard() {
       totalEmployees: employees.length,
       totalDepartments: departments.length,
       pendingLeaves,
+      approvedLeaves,
       totalEvaluations: evaluations.length,
       upcomingTrainings,
       openRecruitments,
@@ -203,7 +206,7 @@ export default function Dashboard() {
               <div className="flex justify-between items-center p-3 rounded-lg bg-white/60 dark:bg-slate-700/60 backdrop-blur-sm border border-green-100 dark:border-slate-700">
                 <span className="text-sm font-medium text-foreground">Congés approuvés</span>
                 <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 bg-yellow-100 dark:bg-yellow-900/30 px-3 py-1 rounded-full">
-                  {getLeaves().filter((l) => l.status === "approved").length}
+                  {stats.approvedLeaves}
                 </span>
               </div>
             </div>

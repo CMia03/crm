@@ -71,8 +71,8 @@ const roboto = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "HR Manager - Gestion des Ressources Humaines",
-  description: "Système de gestion des ressources humaines",
+  title: "CRM Manager - Gestion des Ressources Humaines",
+  description: "Système de gestion CRM et ressources humaines",
 };
 
 export default function RootLayout({

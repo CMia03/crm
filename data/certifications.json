@@ -1,0 +1,73 @@
+[
+  {
+    "id": "1",
+    "title": "Certification Développeur Web",
+    "description": "Certification en développement web (HTML, CSS, JavaScript)",
+    "courseId": "1",
+    "requirements": [
+      "Compléter le cours Introduction au Développement Web",
+      "Obtenir au moins 80% au quiz final",
+      "Soumettre un projet final"
+    ],
+    "validityPeriod": 24,
+    "issuer": "CRM Academy",
+    "status": "active",
+    "createdAt": "2024-01-20",
+    "issuedCertificates": [
+      {
+        "id": "cert1",
+        "certificationId": "1",
+        "studentId": "1",
+        "issuedDate": "2024-02-15",
+        "expiryDate": "2026-02-15",
+        "certificateNumber": "CERT-WEB-2024-001",
+        "status": "active",
+        "issuedBy": "Prof. Martin Dupont"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Certification Marketing Digital",
+    "description": "Certification en stratégies de marketing digital",
+    "courseId": "2",
+    "requirements": [
+      "Compléter le cours Marketing Digital Avancé",
+      "Obtenir au moins 75% au quiz final",
+      "Créer une campagne marketing"
+    ],
+    "validityPeriod": 36,
+    "issuer": "CRM Academy",
+    "status": "active",
+    "createdAt": "2024-02-10",
+    "issuedCertificates": [
+      {
+        "id": "cert2",
+        "certificationId": "2",
+        "studentId": "5",
+        "issuedDate": "2024-03-01",
+        "expiryDate": "2027-03-01",
+        "certificateNumber": "CERT-MKT-2024-001",
+        "status": "active",
+        "issuedBy": "Prof. Claire Rousseau"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Certification Data Scientist",
+    "description": "Certification en data science et machine learning",
+    "courseId": "3",
+    "requirements": [
+      "Compléter le cours Data Science avec Python",
+      "Obtenir au moins 85% au quiz final",
+      "Réaliser un projet de machine learning"
+    ],
+    "validityPeriod": 36,
+    "issuer": "CRM Academy",
+    "status": "active",
+    "createdAt": "2024-01-25",
+    "issuedCertificates": []
+  }
+]
+

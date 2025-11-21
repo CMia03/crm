@@ -1,0 +1,132 @@
+[
+  {
+    "id": "1",
+    "title": "Introduction au Développement Web",
+    "description": "Apprenez les bases du développement web avec HTML, CSS et JavaScript",
+    "instructor": "Prof. Martin Dupont",
+    "category": "Développement",
+    "duration": 40,
+    "level": "beginner",
+    "price": 299,
+    "status": "published",
+    "createdAt": "2024-01-10",
+    "updatedAt": "2024-01-15",
+    "enrolledStudents": ["1", "4"],
+    "modules": [
+      {
+        "id": "m1",
+        "title": "Introduction à HTML",
+        "description": "Découvrez les bases du HTML",
+        "order": 1,
+        "content": "https://example.com/module1",
+        "duration": 120,
+        "type": "video"
+      },
+      {
+        "id": "m2",
+        "title": "Styling avec CSS",
+        "description": "Apprenez à styliser vos pages web",
+        "order": 2,
+        "content": "https://example.com/module2",
+        "duration": 180,
+        "type": "video"
+      },
+      {
+        "id": "m3",
+        "title": "JavaScript Basics",
+        "description": "Introduction à la programmation JavaScript",
+        "order": 3,
+        "content": "https://example.com/module3",
+        "duration": 240,
+        "type": "interactive"
+      }
+    ],
+    "requirements": ["Aucun prérequis"],
+    "learningObjectives": [
+      "Comprendre la structure HTML",
+      "Maîtriser les bases du CSS",
+      "Écrire du JavaScript de base"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Marketing Digital Avancé",
+    "description": "Stratégies avancées de marketing digital et réseaux sociaux",
+    "instructor": "Prof. Claire Rousseau",
+    "category": "Marketing",
+    "duration": 60,
+    "level": "intermediate",
+    "price": 499,
+    "status": "published",
+    "createdAt": "2024-02-01",
+    "updatedAt": "2024-02-05",
+    "enrolledStudents": ["2", "5"],
+    "modules": [
+      {
+        "id": "m4",
+        "title": "SEO et SEM",
+        "description": "Optimisation pour les moteurs de recherche",
+        "order": 1,
+        "content": "https://example.com/module4",
+        "duration": 200,
+        "type": "video"
+      },
+      {
+        "id": "m5",
+        "title": "Réseaux Sociaux",
+        "description": "Stratégies pour les réseaux sociaux",
+        "order": 2,
+        "content": "https://example.com/module5",
+        "duration": 180,
+        "type": "interactive"
+      }
+    ],
+    "requirements": ["Bases en marketing"],
+    "learningObjectives": [
+      "Maîtriser le SEO",
+      "Créer des campagnes publicitaires efficaces",
+      "Gérer une présence sur les réseaux sociaux"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Data Science avec Python",
+    "description": "Analyse de données et machine learning avec Python",
+    "instructor": "Prof. Thomas Bernard",
+    "category": "Data Science",
+    "duration": 80,
+    "level": "advanced",
+    "price": 799,
+    "status": "published",
+    "createdAt": "2024-01-20",
+    "updatedAt": "2024-01-25",
+    "enrolledStudents": ["3"],
+    "modules": [
+      {
+        "id": "m6",
+        "title": "Pandas et NumPy",
+        "description": "Manipulation de données avec Pandas",
+        "order": 1,
+        "content": "https://example.com/module6",
+        "duration": 300,
+        "type": "interactive"
+      },
+      {
+        "id": "m7",
+        "title": "Machine Learning",
+        "description": "Introduction au machine learning",
+        "order": 2,
+        "content": "https://example.com/module7",
+        "duration": 360,
+        "type": "assignment"
+      }
+    ],
+    "requirements": ["Python de base", "Mathématiques"],
+    "learningObjectives": [
+      "Manipuler des données avec Pandas",
+      "Créer des modèles de machine learning",
+      "Visualiser des données"
+    ]
+  }
+]
+

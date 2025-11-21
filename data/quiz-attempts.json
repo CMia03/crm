@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1",
+    "quizId": "1",
+    "studentId": "1",
+    "answers": {
+      "q1": "HyperText Markup Language",
+      "q2": "true",
+      "q3": "color"
+    },
+    "score": 35,
+    "maxScore": 35,
+    "percentage": 100,
+    "passed": true,
+    "completedAt": "2024-02-10T15:30:00",
+    "timeSpent": 25,
+    "attemptNumber": 1
+  },
+  {
+    "id": "2",
+    "quizId": "2",
+    "studentId": "5",
+    "answers": {
+      "q4": "Search Engine Optimization",
+      "q5": "true"
+    },
+    "score": 35,
+    "maxScore": 35,
+    "percentage": 100,
+    "passed": true,
+    "completedAt": "2024-02-25T10:20:00",
+    "timeSpent": 15,
+    "attemptNumber": 1
+  }
+]
+
