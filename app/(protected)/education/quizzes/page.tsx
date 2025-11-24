@@ -14,8 +14,8 @@ import { Plus, Edit, Trash2, FileText, Clock, Target } from "lucide-react"
 import { SearchInput } from "@/components/ui/search-input"
 
 export default function QuizzesPage() {
-  const [quizzes, setQuizzes] = useState<Quiz[]>([])
-  const [filteredQuizzes, setFilteredQuizzes] = useState<Quiz[]>([])
+  const [quizzes, setQuizzes] = useState<Quiz[]>(getQuizzes())
+  const [filteredQuizzes, setFilteredQuizzes] = useState<Quiz[]>(getQuizzes())
   const [courses] = useState(getOnlineCourses())
   const [searchQuery, setSearchQuery] = useState("")
   const [isDialogOpen, setIsDialogOpen] = useState(false)
@@ -35,11 +35,15 @@ export default function QuizzesPage() {
   }, [])
 
   useEffect(() => {
-    filterQuizzes()
+    if (quizzes.length > 0 || searchQuery.trim()) {
+      filterQuizzes()
+    }
   }, [searchQuery, quizzes])
 
   const loadQuizzes = () => {
-    setQuizzes(getQuizzes())
+    const loadedQuizzes = getQuizzes()
+    setQuizzes(loadedQuizzes)
+    setFilteredQuizzes(loadedQuizzes)
   }
 
   const filterQuizzes = () => {
@@ -162,6 +166,82 @@ export default function QuizzesPage() {
             />
           </div>
 
+          {/* Vue mobile */}
+          <div className="lg:hidden space-y-3">
+            {filteredQuizzes.length === 0 ? (
+              <div className="text-center text-muted-foreground py-8">
+                {quizzes.length === 0 ? "Aucun quiz disponible" : "Aucun quiz trouvé avec cette recherche"}
+              </div>
+            ) : (
+              filteredQuizzes.map((quiz) => (
+                <Card key={quiz.id} className="border-2 border-blue-100 dark:border-slate-700">
+                  <CardContent className="p-4">
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex items-center gap-2 flex-1">
+                        <FileText className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-semibold text-foreground truncate">{quiz.title}</h3>
+                          <p className="text-xs text-muted-foreground mt-1">{getCourseTitle(quiz.courseId)}</p>
+                        </div>
+                      </div>
+                      <Badge
+                        variant={
+                          quiz.status === "published"
+                            ? "success"
+                            : quiz.status === "archived"
+                            ? "secondary"
+                            : "outline"
+                        }
+                        className="ml-2 flex-shrink-0"
+                      >
+                        {getStatusLabel(quiz.status)}
+                      </Badge>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-3 mb-3">
+                      <div className="flex items-center gap-2 text-sm">
+                        <FileText className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-muted-foreground">{quiz.questions.length} questions</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Target className="h-4 w-4 text-green-600 dark:text-green-400" />
+                        <span className="text-foreground font-medium">{quiz.passingScore}%</span>
+                      </div>
+                      {quiz.timeLimit && (
+                        <div className="flex items-center gap-2 text-sm">
+                          <Clock className="h-4 w-4 text-muted-foreground" />
+                          <span className="text-muted-foreground">{quiz.timeLimit}min</span>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="flex gap-2 pt-3 border-t border-blue-100 dark:border-slate-700">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="flex-1"
+                        onClick={() => handleOpenDialog(quiz)}
+                      >
+                        <Edit className="h-4 w-4 mr-2" />
+                        Modifier
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="flex-1 text-red-600 dark:text-red-400"
+                        onClick={() => handleDelete(quiz.id)}
+                      >
+                        <Trash2 className="h-4 w-4 mr-2" />
+                        Supprimer
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))
+            )}
+          </div>
+
+          {/* Vue desktop */}
           <div className="hidden lg:block overflow-x-auto">
             <Table>
               <TableHeader>
