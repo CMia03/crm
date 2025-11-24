@@ -1,0 +1,100 @@
+[
+  {
+    "id": "1",
+    "firstName": "Jean",
+    "lastName": "Dupont",
+    "email": "jean.dupont@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "positionId": "1",
+    "positionTitle": "Développeur Full Stack",
+    "fileUrl": "",
+    "fileContent": "CV de Jean Dupont - Développeur Full Stack avec 5 ans d'expérience",
+    "experience": [
+      {
+        "company": "TechCorp",
+        "position": "Développeur Senior",
+        "startDate": "2020-01",
+        "endDate": "2024-12",
+        "description": "Développement d'applications web avec React, Node.js et PostgreSQL"
+      },
+      {
+        "company": "StartupXYZ",
+        "position": "Développeur Full Stack",
+        "startDate": "2018-06",
+        "endDate": "2019-12",
+        "description": "Développement frontend et backend pour une application SaaS"
+      }
+    ],
+    "education": [
+      {
+        "institution": "École Supérieure d'Informatique",
+        "degree": "Master",
+        "field": "Informatique",
+        "startDate": "2016",
+        "endDate": "2018"
+      }
+    ],
+    "skills": ["React", "Node.js", "TypeScript", "PostgreSQL", "Docker", "AWS"],
+    "languages": [
+      {
+        "language": "Français",
+        "level": "Natif"
+      },
+      {
+        "language": "Anglais",
+        "level": "Courant"
+      }
+    ],
+    "submittedDate": "2024-01-15",
+    "status": "new",
+    "notes": "Excellent profil, à contacter rapidement"
+  },
+  {
+    "id": "2",
+    "firstName": "Marie",
+    "lastName": "Martin",
+    "email": "marie.martin@example.com",
+    "phone": "+33 6 98 76 54 32",
+    "positionId": "2",
+    "positionTitle": "Chef de Projet",
+    "fileUrl": "",
+    "fileContent": "CV de Marie Martin - Chef de Projet avec expertise en gestion d'équipe",
+    "experience": [
+      {
+        "company": "Consulting Pro",
+        "position": "Chef de Projet Senior",
+        "startDate": "2019-03",
+        "endDate": "2024-12",
+        "description": "Gestion de projets IT complexes avec équipes internationales"
+      }
+    ],
+    "education": [
+      {
+        "institution": "École de Management",
+        "degree": "MBA",
+        "field": "Management de Projet",
+        "startDate": "2017",
+        "endDate": "2019"
+      }
+    ],
+    "skills": ["Gestion de projet", "Agile", "Scrum", "Jira", "Communication"],
+    "languages": [
+      {
+        "language": "Français",
+        "level": "Natif"
+      },
+      {
+        "language": "Anglais",
+        "level": "Courant"
+      },
+      {
+        "language": "Espagnol",
+        "level": "Intermédiaire"
+      }
+    ],
+    "submittedDate": "2024-02-10",
+    "status": "reviewed",
+    "notes": "Profil intéressant pour le poste"
+  }
+]
+

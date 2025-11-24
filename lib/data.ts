@@ -11,6 +11,7 @@ import quizzesData from "@/data/quizzes.json"
 import certificationsData from "@/data/certifications.json"
 import studentProgressData from "@/data/student-progress.json"
 import quizAttemptsData from "@/data/quiz-attempts.json"
+import resumesData from "@/data/resumes.json"
 import type {
   Employee,
   Department,
@@ -25,6 +26,7 @@ import type {
   Certification,
   StudentProgress,
   QuizAttempt,
+  Resume,
 } from "./types"
 
 // Fonctions utilitaires pour localStorage
@@ -308,6 +310,52 @@ export const updateRecruitment = (id: string, updates: Partial<Recruitment>) => 
     return recruitments[index]
   }
   return null
+}
+
+// Resumes (CV)
+let resumes: Resume[] = initData("resumes", resumesData as Resume[])
+export const getResumes = () => {
+  resumes = loadFromStorage("resumes", resumesData as Resume[])
+  return resumes
+}
+export const getResume = (id: string) => {
+  resumes = loadFromStorage("resumes", resumesData as Resume[])
+  return resumes.find((r) => r.id === id)
+}
+export const getResumesByPosition = (positionId: string) => {
+  resumes = loadFromStorage("resumes", resumesData as Resume[])
+  return resumes.filter((r) => r.positionId === positionId)
+}
+export const createResume = (resume: Omit<Resume, "id" | "submittedDate">) => {
+  resumes = loadFromStorage("resumes", resumesData as Resume[])
+  const newResume: Resume = {
+    ...resume,
+    id: String(Date.now()),
+    submittedDate: new Date().toISOString(),
+  }
+  resumes.push(newResume)
+  saveToStorage("resumes", resumes)
+  return newResume
+}
+export const updateResume = (id: string, updates: Partial<Resume>) => {
+  resumes = loadFromStorage("resumes", resumesData as Resume[])
+  const index = resumes.findIndex((r) => r.id === id)
+  if (index !== -1) {
+    resumes[index] = { ...resumes[index], ...updates }
+    saveToStorage("resumes", resumes)
+    return resumes[index]
+  }
+  return null
+}
+export const deleteResume = (id: string) => {
+  resumes = loadFromStorage("resumes", resumesData as Resume[])
+  const index = resumes.findIndex((r) => r.id === id)
+  if (index !== -1) {
+    resumes.splice(index, 1)
+    saveToStorage("resumes", resumes)
+    return true
+  }
+  return false
 }
 
 // Module Éducation / eLearning - Students

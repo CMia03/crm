@@ -114,6 +114,40 @@ export interface Recruitment {
   hiredCandidate: string | null
 }
 
+export interface Resume {
+  id: string
+  firstName: string
+  lastName: string
+  email: string
+  phone: string
+  positionId: string // Poste pour lequel le CV est destiné
+  positionTitle?: string // Titre du poste (pour affichage)
+  fileUrl?: string // URL du fichier CV si uploadé
+  fileContent?: string // Contenu du CV en texte
+  experience: {
+    company: string
+    position: string
+    startDate: string
+    endDate?: string
+    description: string
+  }[]
+  education: {
+    institution: string
+    degree: string
+    field: string
+    startDate: string
+    endDate?: string
+  }[]
+  skills: string[]
+  languages: {
+    language: string
+    level: string
+  }[]
+  submittedDate: string
+  status: "new" | "reviewed" | "shortlisted" | "rejected"
+  notes?: string
+}
+
 export interface User {
   id: string
   username: string

@@ -35,7 +35,11 @@ const navigation = [
   { name: "Congés", href: "/leaves", icon: Calendar },
   { name: "Évaluations", href: "/evaluations", icon: FileText },
   { name: "Formations", href: "/trainings", icon: GraduationCap },
-  { name: "Recrutements", href: "/recruitments", icon: UserPlus },
+]
+
+const recruitmentNavigation = [
+  { name: "Offres d'emploi", href: "/recruitments", icon: UserPlus },
+  { name: "Gestion des CV", href: "/recruitments/cvs", icon: FileText },
 ]
 
 const educationNavigation = [
@@ -52,6 +56,7 @@ export function Sidebar() {
   const [session, setSession] = useState<AuthSession | null>(null)
   const [isRHExpanded, setIsRHExpanded] = useState(false)
   const [isEducationExpanded, setIsEducationExpanded] = useState(false)
+  const [isRecruitmentExpanded, setIsRecruitmentExpanded] = useState(false)
 
   useEffect(() => {
     setSession(getSession())
@@ -139,6 +144,63 @@ export function Sidebar() {
                 </Link>
               )
             })}
+                
+                {/* Sous-menu Recrutements */}
+                <div className="mt-2">
+                  <button
+                    onClick={() => setIsRecruitmentExpanded(!isRecruitmentExpanded)}
+                    className={cn(
+                      "w-full flex items-center justify-between px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200",
+                      pathname.startsWith("/recruitments")
+                        ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+                        : "text-muted-foreground hover:bg-blue-50/50 dark:hover:bg-slate-700/50"
+                    )}
+                  >
+                    <div className="flex items-center gap-3">
+                      <UserPlus className="h-5 w-5" />
+                      <span>Recrutements</span>
+                    </div>
+                    <ChevronDown
+                      className={cn(
+                        "h-4 w-4 transition-transform duration-300 ease-in-out",
+                        isRecruitmentExpanded && "rotate-180"
+                      )}
+                    />
+                  </button>
+                  {isRecruitmentExpanded && (
+                    <nav className="space-y-1 mt-1 ml-4">
+                      {recruitmentNavigation.map((item, index) => {
+                        const isActive = pathname === item.href
+                        const colors = [
+                          { bg: "bg-blue-500", hover: "hover:bg-blue-100 dark:hover:bg-blue-900/30", text: "text-blue-600 dark:text-blue-400", active: "bg-blue-500" },
+                          { bg: "bg-green-500", hover: "hover:bg-green-100 dark:hover:bg-green-900/30", text: "text-green-600 dark:text-green-400", active: "bg-green-500" },
+                        ]
+                        const color = colors[index % 2]
+                        
+                        return (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className={cn(
+                              "flex items-center gap-3 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group",
+                              isActive
+                                ? `${color.active} text-white shadow-md`
+                                : `text-muted-foreground ${color.hover} hover:text-foreground`
+                            )}
+                          >
+                            <item.icon className={cn(
+                              "h-4 w-4 transition-transform duration-200",
+                              isActive ? "text-white" : color.text,
+                              "group-hover:scale-110"
+                            )} />
+                            <span className={isActive ? "text-white font-semibold" : ""}>{item.name}</span>
+                          </Link>
+                        )
+                      })}
+                    </nav>
+                  )}
+                </div>
               </nav>
             )}
           </div>
