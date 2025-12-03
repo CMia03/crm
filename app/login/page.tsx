@@ -115,7 +115,7 @@ export default function LoginPage() {
             </Button>
           </form>
           <div className="p-4 bg-gray-100 rounded-lg shadow-md w-fit">
-            <h5 className="font-semibold text-lg mb-2">Données de test</h3>
+            <h5 className="font-semibold text-lg mb-2">Données de test</h5>
             <p>Identifiant : admin</p>
             <p>Mot de passe : admin123</p>
           </div>
