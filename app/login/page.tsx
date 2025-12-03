@@ -114,10 +114,10 @@ export default function LoginPage() {
               {isLoading ? "Connexion..." : "Se connecter"}
             </Button>
           </form>
-          <div className="p-4 bg-gray-100 rounded-lg shadow-md w-fit">
-            <h5 className="font-semibold text-lg mb-2">Données de test</h5>
-            <p>Identifiant : admin</p>
-            <p>Mot de passe : admin123</p>
+          <div className="p-4">
+            <span className="text-lg mb-2">Données de test</span>
+            <span>Identifiant : admin</span>
+            <span>Mot de passe : admin123</span>
           </div>
 
 
