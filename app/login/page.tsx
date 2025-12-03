@@ -118,11 +118,13 @@ export default function LoginPage() {
             <CardDescription className="text-sm mt-1">
               Donnée de test
             </CardDescription>
-            <span>Identifiant : admin</span>
-            <span>Mot de passe : admin123</span>
+            <CardDescription className="text-sm mt-1">
+             Identifiant: admin
+            </CardDescription>
+             <CardDescription className="text-sm mt-1">
+             Mot de passe: admin123
+            </CardDescription>
           </div>
-
-
         </CardContent>
       </Card>
     </div>
