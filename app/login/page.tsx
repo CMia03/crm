@@ -116,7 +116,7 @@ export default function LoginPage() {
           </form>
           <div className="p-4">
             <CardDescription className="text-sm mt-1">
-              Donnée de test
+              Données de test
             </CardDescription>
             <CardDescription className="text-sm mt-1">
              Identifiant: admin
