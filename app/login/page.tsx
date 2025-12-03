@@ -115,7 +115,9 @@ export default function LoginPage() {
             </Button>
           </form>
           <div className="p-4">
-            <span className="text-lg mb-2">Données de test</span>
+            <CardDescription className="text-sm mt-1">
+              Donnée de test
+            </CardDescription>
             <span>Identifiant : admin</span>
             <span>Mot de passe : admin123</span>
           </div>
