@@ -47,16 +47,16 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 p-4">
-      <Card className="w-full max-w-md shadow-2xl border-2 border-blue-200 dark:border-slate-700">
-        <CardHeader className="text-center space-y-4 bg-gradient-to-r from-blue-50/50 to-green-50/50 dark:from-slate-700/50 dark:to-slate-800/50 border-b-2 border-blue-100 dark:border-slate-700">
+    <div className="min-h-screen flex items-center justify-center bg-petroleum-50 dark:bg-petroleum-900 p-4">
+      <Card className="w-full max-w-md shadow-2xl border-2 border-petroleum-200 dark:border-petroleum-700">
+        <CardHeader className="text-center space-y-4 bg-petroleum-50/50 dark:bg-petroleum-700/50 border-b-2 border-petroleum-100 dark:border-petroleum-700">
           <div className="flex justify-center mb-2">
-            <div className="p-3 rounded-lg bg-gradient-to-br from-blue-500 to-green-500 shadow-md">
+            <div className="p-3 rounded-lg bg-[#0a4f7a] shadow-md">
               <LayoutDashboard className="h-8 w-8 text-white" />
             </div>
           </div>
           <div>
-            <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
+            <CardTitle className="text-2xl font-bold text-[#0a4f7a] dark:text-[#60a5fa]">
               CRM Manager
             </CardTitle>
             <CardDescription className="text-sm mt-1">
@@ -67,8 +67,8 @@ export default function LoginPage() {
         <CardContent className="p-6 sm:p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
-              <div className="p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
-                <p className="text-sm text-red-600 dark:text-red-400 text-center">{error}</p>
+              <div className="p-3 rounded-lg bg-petroleum-50 dark:bg-petroleum-900/20 border border-petroleum-200 dark:border-petroleum-800">
+                <p className="text-sm text-petroleum-600 dark:text-petroleum-400 text-center">{error}</p>
               </div>
             )}
 
@@ -108,7 +108,7 @@ export default function LoginPage() {
 
             <Button
               type="submit"
-              className="w-full h-11 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+              className="w-full h-11"
               disabled={isLoading}
             >
               {isLoading ? "Connexion..." : "Se connecter"}

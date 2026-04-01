@@ -516,7 +516,7 @@ export default function OnlineCoursesPage() {
             </Button>
             <Button
               onClick={handleSubmit}
-              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+              className="w-full sm:w-auto bg-[#0a4f7a] hover:bg-[#084060]"
             >
               {editingCourse ? "Modifier" : "Créer"}
             </Button>

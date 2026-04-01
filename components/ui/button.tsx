@@ -8,15 +8,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-blue-500",
+          "bg-[#0a4f7a] text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-[#0a4f7a]",
         destructive:
-          "bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-red-500",
+          "bg-green-500 text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-green-500",
         outline:
-          "border-2 border-blue-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 shadow-sm hover:bg-blue-50 dark:hover:bg-slate-600 hover:border-blue-300 dark:hover:border-slate-500 hover:scale-105 active:scale-95 focus-visible:ring-blue-500 dark:focus-visible:ring-blue-400",
+          "border-2 border-[#e0f2fe] dark:border-[#084060] bg-[#f0f9ff] dark:bg-[#084060] text-[#0a4f7a] dark:text-[#60a5fa] shadow-sm hover:bg-[#e0f2fe] dark:hover:bg-[#063147] hover:border-[#bae6fd] dark:hover:border-[#0284c7] hover:scale-105 active:scale-95 focus-visible:ring-[#0a4f7a] dark:focus-visible:ring-[#60a5fa]",
         secondary:
-          "bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-green-500",
-        ghost: "hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-blue-400 active:bg-blue-100 dark:active:bg-slate-600",
-        link: "text-blue-600 dark:text-blue-400 underline-offset-4 hover:underline hover:text-blue-700 dark:hover:text-blue-300",
+          "bg-green-500 text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-green-500",
+        ghost: "hover:bg-[#f0f9ff] dark:hover:bg-[#084060] hover:text-[#0a4f7a] dark:hover:text-[#60a5fa] active:bg-[#e0f2fe] dark:active:bg-[#063147]",
+        link: "text-[#0a4f7a] dark:text-[#60a5fa] underline-offset-4 hover:underline hover:text-[#084060] dark:hover:text-[#93c5fd]",
       },
       size: {
         default: "h-9 px-4 py-2",

@@ -191,7 +191,7 @@ export default function LeavesPage() {
     <div className="space-y-4 sm:space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-petroleum-600 dark:text-petroleum-400">
             Congés
           </h1>
           <p className="text-sm sm:text-base text-muted-foreground mt-1">
@@ -208,7 +208,7 @@ export default function LeavesPage() {
       </div>
 
       <Card className="overflow-hidden">
-        <CardHeader className="bg-gradient-to-r from-blue-50/50 to-green-50/50 dark:from-slate-700/50 dark:to-slate-800/50 border-b-2 border-blue-100 dark:border-slate-700">
+        <CardHeader className="bg-petroleum-50/50 dark:bg-petroleum-700/50 border-b-2 border-petroleum-100 dark:border-petroleum-700">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <div>
               <CardTitle className="text-lg sm:text-xl">Liste des congés</CardTitle>
@@ -538,7 +538,7 @@ export default function LeavesPage() {
             </Button>
             <Button 
               onClick={handleSubmit}
-              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+              className="w-full sm:w-auto bg-petroleum-600 hover:bg-petroleum-700"
             >
               {editingLeave ? "Modifier" : "Créer"}
             </Button>

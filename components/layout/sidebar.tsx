@@ -79,17 +79,17 @@ export function Sidebar() {
 
       <aside
         className={cn(
-          "fixed top-0 left-0 z-40 h-screen w-64 bg-white dark:bg-slate-800 lg:bg-gradient-to-b lg:from-white lg:via-blue-50/30 lg:to-green-50/30 dark:lg:from-slate-800 dark:lg:via-slate-800/50 dark:lg:to-slate-900 border-r-2 border-blue-200 dark:border-slate-700 shadow-xl transition-transform lg:translate-x-0",
+          "fixed top-0 left-0 z-40 h-screen w-64 bg-white dark:bg-petroleum-800 lg:bg-white border-r-2 border-petroleum-200 dark:border-petroleum-700 shadow-xl transition-transform lg:translate-x-0",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
         <div className="h-full px-4 py-4 flex flex-col overflow-y-auto">
-          <div className="mb-8 mt-12 lg:mt-4 pb-6 border-b-2 border-blue-100 dark:border-slate-700">
+          <div className="mb-8 mt-12 lg:mt-4 pb-6 border-b-2 border-petroleum-100 dark:border-petroleum-700">
             <div className="flex items-center gap-3 mb-2">
-              <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-green-500 shadow-md">
+              <div className="p-2 rounded-lg bg-[#0a4f7a] shadow-md">
                 <LayoutDashboard className="h-5 w-5 text-white" />
               </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold text-[#0a4f7a] dark:text-[#60a5fa]">
                 CRM Manager
               </h1>
             </div>

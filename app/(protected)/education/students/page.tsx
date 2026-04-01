@@ -462,7 +462,7 @@ export default function StudentsTrackingPage() {
             <Button variant="outline" onClick={() => setIsDialogOpen(false)}>
               Annuler
             </Button>
-            <Button onClick={handleSubmit} className="bg-gradient-to-r from-blue-600 to-green-600">
+            <Button onClick={handleSubmit} className="bg-[#0a4f7a] hover:bg-[#084060]">
               {editingStudent ? "Modifier" : "Créer"}
             </Button>
           </DialogFooter>

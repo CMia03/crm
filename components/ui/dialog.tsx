@@ -78,7 +78,7 @@ const DialogHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "flex flex-col space-y-2 px-8 pt-6 pb-4 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50 dark:from-slate-700 dark:via-slate-800 dark:to-slate-700 border-b-2 border-blue-200 dark:border-slate-700",
+      "flex flex-col space-y-2 px-8 pt-6 pb-4 bg-petroleum-50 dark:bg-petroleum-700 border-b-2 border-petroleum-200 dark:border-petroleum-700",
       className
     )}
     {...props}
@@ -93,7 +93,7 @@ const DialogTitle = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "text-xl font-bold leading-none tracking-tight bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 dark:from-blue-400 dark:via-green-400 dark:to-yellow-400 bg-clip-text text-transparent",
+      "text-xl font-bold leading-none tracking-tight text-petroleum-600 dark:text-petroleum-400",
       className
     )}
     {...props}
@@ -119,7 +119,7 @@ const DialogFooter = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-3 px-8 py-4 bg-gradient-to-r from-blue-50/50 via-green-50/50 to-yellow-50/50 dark:from-slate-700/50 dark:via-slate-800/50 dark:to-slate-700/50 border-t-2 border-blue-100 dark:border-slate-700",
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-3 px-8 py-4 bg-petroleum-50/50 dark:bg-petroleum-700/50 border-t-2 border-petroleum-100 dark:border-petroleum-700",
       className
     )}
     {...props}
